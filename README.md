@@ -1,10 +1,15 @@
 # AVENGERS (simplified IMDB for Avengers-related movies)
 
 ## Author's context:
-So far, I have 3 django and 1 MERN project under my built. The challenge is to combine 2 frameworks: Django for backend and REACT for frontend.
+Before this, I had 2 positive experiences with Django and 3 failures with REACT. 
+I rushed through my first REACT/Express project with a To-Do list and didn't fully comprehend how REACT works.
+Then I tried to make Hangman with the MERN stack. It worked locally but I couldn't get it to deploy because I didn't understand all the pieces.
+Most recently, I tried to make a Trello clone with REACT frontend and Django backend. In hindsight, I tried to learn too many new things at once
+
+For this reason, I started this project with 2 guiding principles in mind A) don't mix frameworks. Keep this full MERN or full PERN. B) Keep the scope simple and make the pages mostly static at first.
 
 ## What I built:
-A simplified version of JIRA (more like Trello really).
+Kind of a movie database for Marvel's Avengers (both movies and individual actors).
 
 #### Database (MongoDB):
 - 1st collection/table (words):
@@ -27,28 +32,29 @@ david: testaccount
 
 
 ## New technical achievements:
->**ViewSet:**
+>**EXPRESS:**
+Up until now, the only backend framework I had used was Django.
+
+>**JSON:**
+Express uses SQL pulls to get values out of a database, and then returns it in an intuitive format, but still in a format I had never seen before. I didn't know what "JSON" meant until this project.
+
+
+>**REACT:**
 Understanding the pre-made and comprehensive purpose of leveraging ViewSet vs. singleton, custom views.
 
-> 
+>**PAGINATION:**
+I only allowed 3 columns and 4 rows, so 12 data points per page.
+
 
 
 
 ## Potential improvements:
->**DRAG AND DROP:**<br>
-A more user-friendly front-end experience where you can move tasks between stages with your mouse.<br>
+>**USER MANAGEMENT:**<br>
+If people can log in, they can start having user-specific requests like favorites or upvotes.<br>
 
->**MULTI-TENANCY:**<br>
-This assumes one user organization - could not sell this product beyond first customer<br>
 
 
 
 ## Learnings:
-- When you see "DYNO", that's specific to Heroku
-- In the MERN project, we made API endpoints for the Express backend to feed info to the REACT frontend. Here, we are using Django REST framework to help Postgres feed into Django and then feed into REACT.
-- You need serializer code to convert Django objects into JSON format for REACT consumption
-- Said serializer code is often placed in a separate file lateral to the models.py, NOT inside the models.py
-- Serializer code has no return/output code. It ways for an HTTP request to feed into a views.py, then the views.py leverages seralizers.py to convert Django model to JSON
-- In Django, ViewSet is a beefier version of View because it has full CRUD functions woven in, whereas in a View, you would have to manually code out a "get" and "post". This works if the CRUD is predictable and SRP is not paramount.
-- Even though all modules are lateral to each other, Django will know which module is "project-level" because of settings.py and because manage.py calls it out
-- Need CORS to facilitate link from REACT to Django
+- A database like Postgres can store images, but you shouldn't do it because it's designed to be fast for structured data, not images. There could be financial cost disparities too. Better to just keep it in a static_media folder
+- When you install something, depedencies are automatically added to the package.json file. In Django, you need to add manually.
