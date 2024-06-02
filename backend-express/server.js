@@ -25,13 +25,13 @@ app.get('/movies/:id', async (req, res) => {
 
     try {
         // Fetching movie details by ID
-        const movieQuery = await dbPool.query('SELECT * FROM Movies WHERE id = $1', [movieId]);
+        const movieQuery = await dbPool.query('SELECT * FROM movies WHERE id = $1', [movieId]);
         const movie = movieQuery.rows[0];
 
         // Fetching actors associated with the movie
         const actorsQuery = await dbPool.query(`
-            SELECT a.* FROM Actors a
-            JOIN Movie_Actors ma ON a.id = ma.actor_id
+            SELECT a.* FROM actors a
+            JOIN movie_actor_linkage ma ON a.id = ma.actor_id
             WHERE ma.movie_id = $1
         `, [movieId]);
         const actors = actorsQuery.rows;
@@ -51,13 +51,13 @@ app.get('/actors/:id', async (req, res) => {
 
     try {
         // Fetching actor details by ID
-        const actorQuery = await dbPool.query('SELECT * FROM Actors WHERE id = $1', [actorId]);
+        const actorQuery = await dbPool.query('SELECT * FROM actors WHERE id = $1', [actorId]);
         const actor = actorQuery.rows[0];
 
         // Fetching movies associated with the actor
         const moviesQuery = await dbPool.query(`
-            SELECT m.* FROM Movies m
-            JOIN Movie_Actors ma ON m.id = ma.movie_id
+            SELECT m.* FROM movies m
+            JOIN movie_actor_linkage ma ON m.id = ma.movie_id
             WHERE ma.actor_id = $1
         `, [actorId]);
         const movies = moviesQuery.rows;
