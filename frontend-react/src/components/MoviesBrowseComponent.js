@@ -17,14 +17,14 @@ function MoviesBrowseComponent() {
     }, []);
 
     return (
-        <div>
-            <h1>Browse Movies</h1>
+        <div className="moviesGrid">
+            <h1 style={{ color: 'white' }}>Browse Movies</h1>
             <div className="moviesGrid">
                 {movies.map((movie, index) => (
                     <div key={index} className="movieCell">
                         <img src="/placeholder.png" alt="Movie Poster" className="moviePoster" />
-                        <h2>{movie.title}</h2>
-                        <p>{new Date(movie.release_date).toLocaleDateString()}</p>
+                        <h2 className="movieTitle">{movie.title}</h2>
+                        <p className="movieDate">{new Date(movie.release_date).toLocaleDateString()}</p>
                     </div>
                 ))}
             </div>
