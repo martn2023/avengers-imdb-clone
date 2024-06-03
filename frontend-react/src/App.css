@@ -19,4 +19,25 @@
     color: #007bff; /* Change color on hover */
 }
 
-/* Add other global styles here */
+/* Grid layout for movies */
+.moviesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styles for each movie cell */
+.movieCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Placeholder image style */
+.moviePoster {
+    width: 100px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    object-fit: cover;
+}
