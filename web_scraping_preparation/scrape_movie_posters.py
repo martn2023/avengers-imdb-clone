@@ -41,4 +41,4 @@ print("HTTP Status Code:", response.status_code)
 
 # optional code I might toss after some dev work
 print("Response content length:", len(response.text))
-print(response.text[:1000])  # Print only the first 1000 characters for brevity
+print(response.text)  # removed the limiter of 1000 characters because we need to understand the code
