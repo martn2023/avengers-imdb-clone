@@ -17,7 +17,7 @@ function MoviesBrowseComponent() {
 
     return (
         <div>
-            <h1 className="header">Browse Movies</h1>
+            <h1 className="header">Browsing All Movies</h1>
             <div className="moviesGrid">
                 {movies.map((movie, index) => (
                     <div key={index} className="movieCell">

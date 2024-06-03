@@ -58,7 +58,7 @@ body {
 .movieTitle {
     color: white; /* White text color */
     font-size: 16px; /* Reduced font size */
-    margin: 10px 0; /* Add some margin */
+    margin: 1px 0; /* Add some margin */
 }
 
 /* Movie title hover effect */
@@ -76,5 +76,5 @@ body {
 .header {
     text-align: center;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
