@@ -38,9 +38,11 @@ Up until now, the only backend framework I had used was Django.
 >**JSON:**
 Express uses SQL pulls to get values out of a database, and then returns it in an intuitive format, but still in a format I had never seen before. I didn't know what "JSON" meant until this project.
 
-
 >**REACT:**
 Understanding the pre-made and comprehensive purpose of leveraging ViewSet vs. singleton, custom views.
+
+>**REACT Router:**
+This is a separate package that is basically urls.py in Django.
 
 >**PAGINATION:**
 I only allowed 3 columns and 4 rows, so 12 data points per page.
