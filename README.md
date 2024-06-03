@@ -61,3 +61,4 @@ If people can log in, they can start having user-specific requests like favorite
 - A database like Postgres can store images, but you shouldn't do it because it's designed to be fast for structured data, not images. There could be financial cost disparities too. Better to just keep it in a static_media folder
 - When you install something, depedencies are automatically added to the package.json file. In Django, you need to add manually.
 - You might have to sort data in the SQL pull/API endpoint instead of counting on REACT to do the heavy lifting
+- The idea of web-scraping isn't something I considered until the middle of the project. It wasn't so bad to download movie posters, but the idea of putting them in a certain file path tree sounded tedious and annoying, so that pointed me to BeautifulSoup.
