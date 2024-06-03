@@ -16,8 +16,8 @@ function MoviesBrowseComponent() {
     }, []);
 
     return (
-        <div className="moviesGrid">
-            <h1 style={{ color: 'white' }}>Browse Movies</h1>
+        <div>
+            <h1 className="header">Browse Movies</h1>
             <div className="moviesGrid">
                 {movies.map((movie, index) => (
                     <div key={index} className="movieCell">

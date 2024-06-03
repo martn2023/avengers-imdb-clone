@@ -22,9 +22,11 @@
 /* Grid layout for movies */
 .moviesGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
+    gap: 30px;
     padding: 20px;
+    max-width: 1600px; /* Increase the max-width to expand the table */
+    margin: 0 auto; /* Center the grid within its parent */
     background-color: #1c1c1c; /* Very dark gray background */
 }
 
@@ -34,12 +36,13 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    width: 100%; /* Adjust width */
 }
 
 /* Placeholder image style */
 .moviePoster {
-    width: 150px; /* Adjust the size as needed */
-    height: 225px; /* Adjust the size as needed */
+    width: 100%; /* Adjust the size as needed */
+    height: auto; /* Adjust the size as needed */
     object-fit: cover;
 }
 
@@ -59,4 +62,11 @@
 .movieDate {
     color: #b0b0b0; /* Light gray text color */
     font-size: 12px; /* Adjust font size if needed */
+}
+
+/* Center header */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
 }
