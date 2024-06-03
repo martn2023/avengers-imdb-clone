@@ -18,8 +18,6 @@ const dbConfig = {
 // Creating a new PostgreSQL pool with the configuration
 const dbPool = new Pool(dbConfig);
 
-console.log('Database pool created with configuration:', dbConfig);
-
 // Route to get a movie by ID along with its actors, like urls.py in Django
 app.get('/movies/:id', async (req, res) => {
     console.log('Received request for movie details with ID:', req.params.id); // Debug log
@@ -27,12 +25,10 @@ app.get('/movies/:id', async (req, res) => {
 
     try {
         // Fetching movie details by ID
-        console.log('Fetching movie details by ID:', movieId);
         const movieQuery = await dbPool.query('SELECT * FROM movies WHERE id = $1', [movieId]);
         const movie = movieQuery.rows[0];
 
         // Fetching actors associated with the movie
-        console.log('Fetching actors associated with the movie ID:', movieId);
         const actorsQuery = await dbPool.query(`
             SELECT a.* FROM actors a
             JOIN movie_actor_linkage ma ON a.id = ma.actor_id
@@ -55,12 +51,10 @@ app.get('/actors/:id', async (req, res) => {
 
     try {
         // Fetching actor details by ID
-        console.log('Fetching actor details by ID:', actorId);
         const actorQuery = await dbPool.query('SELECT * FROM actors WHERE id = $1', [actorId]);
         const actor = actorQuery.rows[0];
 
         // Fetching movies associated with the actor
-        console.log('Fetching movies associated with the actor ID:', actorId);
         const moviesQuery = await dbPool.query(`
             SELECT m.* FROM movies m
             JOIN movie_actor_linkage ma ON m.id = ma.movie_id
@@ -76,44 +70,13 @@ app.get('/actors/:id', async (req, res) => {
     }
 });
 
-// Route to get all movies, ordered by title
+// Route to get all movies, ordered by release date
 app.get('/browse-movies', async (req, res) => {
-    console.log('Received request to browse all movies'); // Debug log
     try {
-        console.log('Fetching all movies ordered by title');
-        const moviesQuery = await dbPool.query('SELECT title, release_date FROM movies ORDER BY title ASC');
-        console.log('Movies fetched successfully');
+        const moviesQuery = await dbPool.query('SELECT title, release_date FROM movies ORDER BY release_date ASC');
         res.json(moviesQuery.rows);
     } catch (error) {
         console.error('Error fetching movies:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
-
-// Route to get all actors, ordered by last name
-app.get('/browse-actors', async (req, res) => {
-    console.log('Received request to browse all actors'); // Debug log
-    try {
-        console.log('Fetching all actors ordered by last name');
-        const actorsQuery = await dbPool.query('SELECT first_name, last_name, sex, date_of_birth FROM actors ORDER BY last_name ASC');
-        console.log('Actors fetched successfully');
-        res.json(actorsQuery.rows);
-    } catch (error) {
-        console.error('Error fetching actors:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
-
-// Route to get all rows and dimensions from the movie_actor_linkage table
-app.get('/browse-movie-actor-linkage', async (req, res) => {
-    console.log('Received request to browse all movie-actor linkages'); // Debug log
-    try {
-        console.log('Fetching all movie-actor linkages');
-        const linkageQuery = await dbPool.query('SELECT * FROM movie_actor_linkage');
-        console.log('Movie-actor linkages fetched successfully');
-        res.json(linkageQuery.rows);
-    } catch (error) {
-        console.error('Error fetching movie-actor linkages:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });

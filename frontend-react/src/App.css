@@ -41,8 +41,8 @@
 
 /* Placeholder image style */
 .moviePoster {
-    width: 100%; /* Adjust the size as needed */
-    height: auto; /* Adjust the size as needed */
+    width: 180px; /* Set fixed width in pixels */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
 
