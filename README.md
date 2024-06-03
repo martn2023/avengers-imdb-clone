@@ -44,8 +44,8 @@ Understanding the pre-made and comprehensive purpose of leveraging ViewSet vs. s
 >**REACT Router:**
 This is a separate package that is basically urls.py in Django.
 
->**BEAUTIFULSOUP4:**
-Python library being used for web scraping.
+>**BEAUTIFULSOUP4 & REQUESTS:**
+Python library being used for web scraping. REQUESTS library used to pull data for Beautiful Soup.
 
 
 
