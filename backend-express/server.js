@@ -81,11 +81,39 @@ app.get('/browse-movies', async (req, res) => {
     console.log('Received request to browse all movies'); // Debug log
     try {
         console.log('Fetching all movies ordered by title');
-        const moviesQuery = await dbPool.query('SELECT title FROM movies ORDER BY title ASC');
+        const moviesQuery = await dbPool.query('SELECT title, release_date FROM movies ORDER BY title ASC');
         console.log('Movies fetched successfully');
         res.json(moviesQuery.rows);
     } catch (error) {
         console.error('Error fetching movies:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+// Route to get all actors, ordered by last name
+app.get('/browse-actors', async (req, res) => {
+    console.log('Received request to browse all actors'); // Debug log
+    try {
+        console.log('Fetching all actors ordered by last name');
+        const actorsQuery = await dbPool.query('SELECT first_name, last_name, sex, date_of_birth FROM actors ORDER BY last_name ASC');
+        console.log('Actors fetched successfully');
+        res.json(actorsQuery.rows);
+    } catch (error) {
+        console.error('Error fetching actors:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+// Route to get all rows and dimensions from the movie_actor_linkage table
+app.get('/browse-movie-actor-linkage', async (req, res) => {
+    console.log('Received request to browse all movie-actor linkages'); // Debug log
+    try {
+        console.log('Fetching all movie-actor linkages');
+        const linkageQuery = await dbPool.query('SELECT * FROM movie_actor_linkage');
+        console.log('Movie-actor linkages fetched successfully');
+        res.json(linkageQuery.rows);
+    } catch (error) {
+        console.error('Error fetching movie-actor linkages:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
