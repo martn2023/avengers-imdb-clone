@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavigationPaneComponent from './components/NavigationPaneComponent';
-import BrowseMoviesComponent from './components/BrowseMoviesComponent';
-import BrowseActorsComponent from './components/BrowseActorsComponent';
+import MoviesBrowseComponent from './components/MoviesBrowseComponent';
+import ActorsBrowseComponent from './components/ActorsBrowseComponent';
 import MovieDetailsComponent from './components/MovieDetailsComponent';
 import ActorDetailsComponent from './components/ActorDetailsComponent';
 
@@ -11,15 +11,14 @@ function App() {
         <Router>
             <div>
                 <NavigationPaneComponent />
-                <Switch>
-                    <Route exact path="/" component={BrowseMoviesComponent} />
-                    //Some redundancy, but intended
-                    <Route path="/browse/movies" component={BrowseMoviesComponent} />
-                    <Route path="/browse-actors" component={BrowseActorsComponent} />
-                    <Route path="/movie/:id" component={MovieDetailsComponent} />
-                    <Route path="/actor/:id" component={ActorDetailsComponent} />
-                    <Route path="*" component={() => <div>404 Not Found</div>} />
-                </Switch>
+                <Routes>
+                    <Route path="/" element={<MoviesBrowseComponent />} />
+                    <Route path="/browse-movies" element={<MoviesBrowseComponent />} />
+                    <Route path="/browse-actors" element={<ActorsBrowseComponent />} />
+                    <Route path="/movie/:id" element={<MovieDetailsComponent />} />
+                    <Route path="/actor/:id" element={<ActorDetailsComponent />} />
+                    <Route path="*" element={<div>404 Not Found</div>} />
+                </Routes>
             </div>
         </Router>
     );
