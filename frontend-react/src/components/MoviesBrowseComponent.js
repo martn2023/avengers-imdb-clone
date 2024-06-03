@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import '../App.css'; // Import the CSS file
 
 function MoviesBrowseComponent() {
@@ -22,7 +21,7 @@ function MoviesBrowseComponent() {
             <div className="moviesGrid">
                 {movies.map((movie, index) => (
                     <div key={index} className="movieCell">
-                        <img src="/placeholder.png" alt="Movie Poster" className="moviePoster" />
+                        <img src="/images/movie_poster_placeholder_marvel.jpg" alt="Movie Poster" className="moviePoster" />
                         <h2 className="movieTitle">{movie.title}</h2>
                         <p className="movieDate">{new Date(movie.release_date).toLocaleDateString()}</p>
                     </div>
