@@ -48,7 +48,25 @@ print(response.text)  # removed the limiter of 1000 characters because we need t
 # Parse the HTML content with BeautifulSoup's specific parser: html.parser
 print("Parsing HTML content with BeautifulSoup")
 soup = BeautifulSoup(response.text, 'html.parser')
-print(soup)
 print("here comes the soup!")
+print(soup)
 
 
+def get_movie_thumbnail_url(soup):
+    print("ATTEMPTING TO RUN: get_movie_thumbnail_url")
+
+    # The specific HTML structure and class names might need to be adjusted based on the actual HTML content of the page
+    # Here we're assuming the image is within an 'img' tag inside a class 'poster'
+    thumbnail = soup.find('img', {'class': 'poster'})
+
+    if thumbnail:
+        thumbnail_url = thumbnail['src']
+        print("Thumbnail URL FOUND:", thumbnail_url)
+        return thumbnail_url
+    else:
+        print("Thumbnail URL NOT FOUND")
+        return None
+
+print("Calling get_movie_thumbnail_url with the soup")
+thumbnail_url = get_movie_thumbnail_url(soup)
+print(f"Thumbnail URL: {thumbnail_url}")
