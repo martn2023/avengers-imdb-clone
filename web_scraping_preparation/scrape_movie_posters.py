@@ -1,5 +1,8 @@
+# python scrape_movie_posters.py
+
 import requests
 from urllib.parse import quote_plus
+from bs4 import BeautifulSoup
 
 # Example movie name
 movie_name = "Thor 2: The Dark World"
@@ -39,6 +42,13 @@ print("Making request to the constructed URL")
 response = requests.get(search_url)
 print("HTTP Status Code:", response.status_code)
 
-# optional code I might toss after some dev work
-print("Response content length:", len(response.text))
+# optional code I might toss after some dev work\
 print(response.text)  # removed the limiter of 1000 characters because we need to understand the code
+
+# Parse the HTML content with BeautifulSoup's specific parser: html.parser
+print("Parsing HTML content with BeautifulSoup")
+soup = BeautifulSoup(response.text, 'html.parser')
+print(soup)
+print("here comes the soup!")
+
+
