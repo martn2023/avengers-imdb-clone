@@ -1,22 +1,14 @@
-/* Styles for the navigation container */
-.navigationContainer {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 10px;
-    background-color: #f0f0f0; /* Optional: Background color for the navigation bar */
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../App.css'; // Import the consolidated CSS file
+
+function NavigationPaneComponent() {
+    return (
+        <nav className="navigationContainer">
+            <Link to="/browse-movies" className="navigationLink">Browse Movies</Link>
+            <Link to="/browse-actors" className="navigationLink">Browse Actors</Link>
+        </nav>
+    );
 }
 
-/* Styles for the navigation links within the navigation container */
-.navigationContainer .navigationLink {
-    text-decoration: none;
-    color: #000; /* Text color */
-    font-weight: bold;
-}
-
-/* Styles for the navigation links on hover within the navigation container */
-.navigationContainer .navigationLink:hover {
-    color: #007bff; /* Change color on hover */
-}
-
-/* Add other global styles here */
+export default NavigationPaneComponent;
