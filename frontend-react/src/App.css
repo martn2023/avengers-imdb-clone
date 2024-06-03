@@ -1,17 +1,20 @@
-.navigation {
+/* Styles for the navigation container */
+.navigationContainer {
     display: flex;
     justify-content: flex-start;
     gap: 20px;
     padding: 10px;
     background-color: #f0f0f0; /* Optional: Background color for the navigation bar */
-}
 
-.nav-link {
-    text-decoration: none;
-    color: #000; /* Text color */
-    font-weight: bold;
-}
+    /* Styles for the navigation links */
+    .navigationLink {
+        text-decoration: none;
+        color: #000; /* Text color */
+        font-weight: bold;
 
-.nav-link:hover {
-    color: #007bff; /* Change color on hover */
+        /* Styles for the navigation links on hover */
+        &:hover {
+            color: #007bff; /* Change color on hover */
+        }
+    }
 }
