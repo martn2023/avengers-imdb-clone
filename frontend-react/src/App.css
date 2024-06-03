@@ -19,13 +19,19 @@
     color: #ED1D24; /* Change color on hover to Marvel red */
 }
 
+/* Set background color for the whole page */
+body {
+    background-color: #1c1c1c; /* Very dark gray background */
+    margin: 0; /* Remove default margin */
+}
+
 /* Grid layout for movies */
 .moviesGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
     gap: 5px;
     padding: 20px;
-    max-width: 1400px; /* Adjust max-width to 1700px */
+    max-width: 1400px; /* Adjust max-width to 1400px */
     margin: 0 auto; /* Center the grid within its parent */
     background-color: #1c1c1c; /* Very dark gray background */
 }
