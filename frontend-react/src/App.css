@@ -25,6 +25,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
+    background-color: #1c1c1c; /* Very dark gray background */
 }
 
 /* Styles for each movie cell */
@@ -40,4 +41,22 @@
     width: 100px; /* Adjust the size as needed */
     height: 150px; /* Adjust the size as needed */
     object-fit: cover;
+}
+
+/* Movie title style */
+.movieTitle {
+    color: white; /* White text color */
+    font-size: 16px; /* Reduced font size */
+    margin: 10px 0; /* Add some margin */
+}
+
+/* Movie title hover effect */
+.movieTitle:hover {
+    color: #ff0000; /* Red color on hover */
+}
+
+/* Release date style */
+.movieDate {
+    color: white; /* White text color */
+    font-size: 12px; /* Adjust font size if needed */
 }

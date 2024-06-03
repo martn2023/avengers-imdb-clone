@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import '../App.css'; // Import the CSS file
 
-function BrowseMovies() {
+function MoviesBrowseComponent() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -18,24 +19,17 @@ function BrowseMovies() {
     return (
         <div>
             <h1>Browse Movies</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Release Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {movies.map(movie => (
-                        <tr key={movie.id}>
-                            <td><Link to={`/movie/${movie.id}`}>{movie.title}</Link></td>
-                            <td>{new Date(movie.release_date).toLocaleDateString()}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+            <div className="moviesGrid">
+                {movies.map((movie, index) => (
+                    <div key={index} className="movieCell">
+                        <img src="/placeholder.png" alt="Movie Poster" className="moviePoster" />
+                        <h2>{movie.title}</h2>
+                        <p>{new Date(movie.release_date).toLocaleDateString()}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
 
-export default BrowseMovies;
+export default MoviesBrowseComponent;
