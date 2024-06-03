@@ -64,3 +64,4 @@ Let's pretend there were 100 MCU movies eventually, and I didn't want them all i
 - When you install something, depedencies are automatically added to the package.json file. In Django, you need to add manually.
 - You might have to sort data in the SQL pull/API endpoint instead of counting on REACT to do the heavy lifting
 - The idea of web-scraping isn't something I considered until the middle of the project. It wasn't so bad to download movie posters, but the idea of putting them in a certain file path tree sounded tedious and annoying, so that pointed me to BeautifulSoup.
+- Python already has a "quote_plus" function for encoding strings into search URLs

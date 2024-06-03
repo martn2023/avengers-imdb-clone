@@ -20,7 +20,7 @@ def construct_search_url(movie_name):
     print("ATTEMPTING TO RUN: construct_search_url")
     print("Original movie name in function:", movie_name)
 
-    # Encode the movie name for URL
+    # quote_plus is the python's built-in command that is doing the magic of adding the + signs and %3A to replace colons
     encoded_movie_name = quote_plus(movie_name)
     print("Encoded movie name:", encoded_movie_name)
 
