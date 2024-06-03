@@ -44,8 +44,8 @@ Understanding the pre-made and comprehensive purpose of leveraging ViewSet vs. s
 >**REACT Router:**
 This is a separate package that is basically urls.py in Django.
 
->**PAGINATION:**
-I only allowed 3 columns and 4 rows, so 12 data points per page.
+>**BEAUTIFULSOUP4:**
+Python library being used for web scraping.
 
 
 
@@ -54,6 +54,8 @@ I only allowed 3 columns and 4 rows, so 12 data points per page.
 >**USER MANAGEMENT:**<br>
 If people can log in, they can start having user-specific requests like favorites or upvotes.<br>
 
+>**PAGINATION:**<br>
+Let's pretend there were 100 MCU movies eventually, and I didn't want them all in one page. I might limit a page to 4 columns, 5 rows, and make each block of 20 cells its own page.<br>
 
 
 
