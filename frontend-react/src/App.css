@@ -16,7 +16,7 @@
 
 /* Styles for the navigation links on hover within the navigation container */
 .navigationContainer .navigationLink:hover {
-    color: #007bff; /* Change color on hover */
+    color: #ED1D24; /* Change color on hover to Marvel red */
 }
 
 /* Grid layout for movies */
@@ -32,31 +32,31 @@
 .movieCell {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 /* Placeholder image style */
 .moviePoster {
-    width: 100px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
+    width: 150px; /* Adjust the size as needed */
+    height: 225px; /* Adjust the size as needed */
     object-fit: cover;
 }
 
 /* Movie title style */
 .movieTitle {
     color: white; /* White text color */
-    font-size: 16px; /* Reduced font size */
+    font-size: 14px; /* Reduced font size */
     margin: 10px 0; /* Add some margin */
 }
 
 /* Movie title hover effect */
 .movieTitle:hover {
-    color: #ff0000; /* Red color on hover */
+    color: #ED1D24; /* Marvel red color on hover */
 }
 
 /* Release date style */
 .movieDate {
-    color: white; /* White text color */
+    color: #b0b0b0; /* Light gray text color */
     font-size: 12px; /* Adjust font size if needed */
 }
