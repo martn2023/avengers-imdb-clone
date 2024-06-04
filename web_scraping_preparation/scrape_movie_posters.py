@@ -56,3 +56,15 @@ def find_movie_details_page_url(soup):
 print("Calling find_movie_details_page_url with the soup")
 movie_details_page_url = find_movie_details_page_url(soup)
 print(f"Movie details page URL: {movie_details_page_url}")
+
+
+# code to teach ChatGPT what this movie details page looks like, so we can figure out how to leverage BeautifulSoup better
+if movie_details_page_url:
+    # Make request to the movie details page URL
+    details_response = requests.get(movie_details_page_url)
+    print("HTTP Status Code (details page):", details_response.status_code)
+
+    # Print the HTML content of the movie details page for inspection
+    print(details_response.text)
+else:
+    print("Movie details page URL is None. Cannot proceed.")
