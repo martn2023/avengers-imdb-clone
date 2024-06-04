@@ -79,7 +79,7 @@ app.get('/actors/:id', async (req, res) => {
 // Route to get all movies, ordered by release date
 app.get('/browse-movies', async (req, res) => {
     try {
-        const moviesQuery = await dbPool.query('SELECT title, release_date FROM movies ORDER BY release_date ASC');
+        const moviesQuery = await dbPool.query('SELECT id, title, release_date FROM movies ORDER BY release_date ASC');
         res.json(moviesQuery.rows);
     } catch (error) {
         console.error('Error fetching movies:', error);
