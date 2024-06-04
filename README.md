@@ -45,7 +45,7 @@ Understanding the pre-made and comprehensive purpose of leveraging ViewSet vs. s
 This is a separate package that is basically urls.py in Django.
 
 >**BEAUTIFULSOUP4 & REQUESTS:**
-Python library being used for web scraping. REQUESTS library used to pull data for Beautiful Soup.
+Python library being used for web scraping. REQUESTS library used to pull data for Beautiful Soup. First web-scraper was 90% successful in getting movie posters downloaded and placed in an automatically-generated file hierarchy.
 
 
 

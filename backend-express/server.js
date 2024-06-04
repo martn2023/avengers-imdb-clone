@@ -93,7 +93,7 @@ app.get('/browse-actors', async (req, res) => {
     console.log('Received request to browse all actors'); // Debug log
     try {
         console.log('Fetching all actors ordered by last name');
-        const actorsQuery = await dbPool.query('SELECT first_name, last_name, sex, date_of_birth FROM actors ORDER BY last_name ASC');
+        const actorsQuery = await dbPool.query('SELECT id, first_name, last_name, sex, date_of_birth FROM actors ORDER BY last_name ASC');
         console.log('Actors fetched successfully');
         res.json(actorsQuery.rows);
     } catch (error) {
