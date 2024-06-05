@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../App.css'; // Import the CSS file
 
 function ActorsBrowseComponent() {
@@ -22,7 +23,9 @@ function ActorsBrowseComponent() {
                 {actors.map((actor, index) => (
                     <div key={index} className="actorCell">
                         <img src={`/images/actors/${actor.id}/portrait_${actor.id}.jpg`} alt={`${actor.first_name} ${actor.last_name}`} className="actorPortrait" />
-                        <h2 className="actorName">{actor.first_name} {actor.last_name}</h2>
+                        <Link to={`/actor_details/${actor.id}`} className="actorNameLink">
+                            <p className="actorName">{actor.first_name} {actor.last_name}</p>
+                        </Link>
                     </div>
                 ))}
             </div>

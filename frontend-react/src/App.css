@@ -34,7 +34,7 @@ body {
 .moviesGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
-    gap: 20px; /* Set gap to 20 pixels */
+    gap: 20px;
     padding: 20px;
     max-width: 1400px; /* Adjust max-width to 1400px */
     margin: 0 auto; /* Center the grid within its parent */
@@ -45,7 +45,7 @@ body {
 .actorsGrid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Adjust columns to 5 */
-    gap: 20px; /* Set gap to 20 pixels */
+    gap: 20px;
     padding: 20px;
     max-width: 1400px; /* Adjust max-width to 1400px */
     margin: 0 auto; /* Center the grid within its parent */
@@ -85,20 +85,37 @@ body {
 /* Movie title style */
 .movieTitle {
     color: white; /* White text color */
-    font-size: 18px; /* Reduced font size */
+    font-size: 20px; /* Reduced font size */
     margin: 1px 0; /* Add some margin */
 }
 
 /* Actor name style */
 .actorName {
     color: white; /* White text color */
-    font-size: 20px; /* Increased font size */
+    font-size: 19px; /* Increased font size */
     margin: 1px 0; /* Add some margin */
 }
 
 /* Movie title hover effect */
 .movieTitle:hover {
     color: #ED1D24; /* Marvel red color on hover */
+}
+
+/* Actor name link style */
+.actorNameLink {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+}
+
+/* Actor name link hover effect */
+.actorNameLink:hover .actorName {
+    color: #ED1D24; /* Marvel red color on hover */
+}
+
+/* Release date style */
+.movieDate {
+    color: #d3d3d3; /* Very light gray text color */
+    font-size: 12px; /* Adjust font size if needed */
 }
 
 /* Center header */
