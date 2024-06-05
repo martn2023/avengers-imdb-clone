@@ -134,8 +134,6 @@ body {
     filter: grayscale(85%); /* 85% grayscale */
 }
 
-
-
 /* Styles for the main content container */
 .actorDetailsContainer {
     display: flex;
@@ -175,7 +173,7 @@ body {
 
 /* Large actor portrait style */
 .actorPortraitLarge {
-    width: 400px; /* Set fixed width in pixels */
+    width: 300px; /* Set fixed width in pixels */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     filter: grayscale(50%); /* 50% grayscale */
@@ -211,7 +209,8 @@ body {
 .movieLink {
     text-decoration: none;
     color: white;
-    font-size: 13px;
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
 }
 
 .movieLink:hover {
