@@ -59,7 +59,9 @@ body {
     align-items: flex-start;
     text-align: left;
     width: 100%; /* Takes 100% of the grid column */
-    border: 1px solid white; /* Add border for development */
+    padding: 6px;
+    gap: 1px;
+    border: 1px solid white;
 }
 
 /* Placeholder image style */
@@ -78,9 +80,14 @@ body {
     align-items: center;
     text-align: center;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     border-radius: 10px;
     background-color: #1c1c1c; /* Very dark gray background to match */
+}
+
+/* Movie title link style */
+.movieTitleLink {
+    text-decoration: none; /* Remove underline */
 }
 
 /* Movie title style */
