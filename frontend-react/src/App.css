@@ -166,7 +166,7 @@ body {
 .actorDetailsContent {
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 800px; /* Adjust width to 800px */
     background-color: #1c1c1c; /* Ensure background color is uniform */
     border: 1px solid white; /* Add border */
     padding: 20px;
@@ -224,7 +224,7 @@ body {
 .movieDetailsContent {
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 800px; /* Adjust width to 800px */
     background-color: #1c1c1c; /* Ensure background color is uniform */
     border: 1px solid white; /* Add border */
     padding: 20px;
@@ -250,6 +250,7 @@ body {
 .movieDetailsTop {
     border-bottom: 1px solid white; /* Add border between sections */
     padding-bottom: 20px;
+    font-size: 24px; /* Increase font size for movie title */
 }
 
 /* Bottom section on the right */
@@ -268,4 +269,18 @@ body {
 /* Actor link hover effect */
 .actorLink:hover {
     color: #ED1D24; /* Marvel red color on hover */
+}
+
+/* General styles for actor and movie titles */
+.detailsTitle {
+    font-size: 24px; /* Increase font size for title */
+    color: white;
+    font-weight: bold;
+    margin: 1px 0; /* Add some margin */
+}
+
+/* Release date and birth date style */
+.detailsDate {
+    color: white;
+    font-size: 16px;
 }
