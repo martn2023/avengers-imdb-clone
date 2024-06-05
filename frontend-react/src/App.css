@@ -34,12 +34,12 @@ body {
 .moviesGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 20px; /* Horizontal and vertical gap */
+    gap: 30px; /* Horizontal and vertical gap */
     padding: 20px;
     max-width: 1400px; /* Adjust max-width to 1400px */
     margin: 0 auto; /* Center the grid within its parent */
     background-color: #1c1c1c; /* Very dark gray background */
-    border: 2px solid red; /* Temporary border for debugging */
+    border: 0px solid red; /* Temporary border for debugging */
 }
 
 
@@ -57,28 +57,14 @@ body {
 
 
 
-/* nonworking movie cell code
+/* nonworking movie cell code */
 .movieCell {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    width: 100%;
     padding: 40px 10px 10px 10px;
     border: 1px solid white;
-}
-
-*/
-
-/* WORKING Styles for each movie cell */
-.movieCell {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 40px 10px 10px 10px; /* Increase padding at the top */
-    border: 2px solid blue; /* Temporary border for debugging */
-    background-color: #1c1c1c; /* Very dark gray background */
 }
 
 
