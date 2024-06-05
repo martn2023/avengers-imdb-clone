@@ -133,3 +133,87 @@ body {
     align-self: center; /* Center align the portrait */
     filter: grayscale(85%); /* 85% grayscale */
 }
+
+
+
+/* Styles for the main content container */
+.actorDetailsContainer {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 20px;
+    background-color: #1c1c1c; /* Very dark gray background */
+    color: white; /* White text color */
+}
+
+/* Styles for the actor details box */
+.actorDetailsBox {
+    display: flex;
+    width: 80%;
+    max-width: 1000px; /* Limit the max-width */
+    background-color: #333; /* Slightly lighter gray background for the box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+}
+
+/* Styles for the left side */
+.leftSide {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the right side */
+.rightSide {
+    flex: 2;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Large actor portrait style */
+.actorPortraitLarge {
+    width: 400px; /* Set fixed width in pixels */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    filter: grayscale(50%); /* 50% grayscale */
+}
+
+/* Large actor name style */
+.actorNameLarge {
+    font-size: 24px; /* Increased font size */
+    margin-bottom: 10px;
+}
+
+/* Styles for the actor bio */
+.actorBio p {
+    margin: 5px 0;
+}
+
+/* Styles for the actor movies list */
+.actorMovies h3 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.actorMovies ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.actorMovies li {
+    margin-bottom: 5px;
+}
+
+/* Styles for movie links */
+.movieLink {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.movieLink:hover {
+    color: #ED1D24; /* Marvel red color on hover */
+}
