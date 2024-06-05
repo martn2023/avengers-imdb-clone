@@ -15,27 +15,18 @@ function MoviesBrowseComponent() {
             });
     }, []);
 
-    const getImageUrl = (movieId) => {
-        return `/images/movies/${movieId}/movie_poster_${movieId}.jpg`;
-    };
-
     return (
         <div>
             <h1 className="header">Browsing All Movies</h1>
             <div className="moviesGrid">
-                {movies.map((movie) => (
-                    <div key={movie.id} className="movieCell">
-                        <img
-                            src={getImageUrl(movie.id)}
-                            alt={movie.title}
-                            className="moviePoster"
-                            onError={(e) => {
-                                e.target.onerror = null; // Prevents infinite loop in case the placeholder image fails to load
-                                e.target.src = '/images/movies/movie_poster_placeholder_marvel.jpg';
-                            }}
+                {movies.map((movie, index) => (
+                    <div key={index} className="movieCell">
+                        <img src={`/images/movies/${movie.id}/movie_poster_${movie.id}.jpg`}
+                             alt="Movie Poster"
+                             className="moviePoster"
+                             onError={(e) => { e.target.onerror = null; e.target.src="/images/movies/movie_poster_placeholder_marvel.jpg"; }}
                         />
                         <h2 className="movieTitle">{movie.title}</h2>
-                        <p className="movieDate">{new Date(movie.release_date).toLocaleDateString()}</p>
                     </div>
                 ))}
             </div>
