@@ -79,4 +79,32 @@ body {
     margin-bottom: 10px;
 }
 
+.actorPortrait {
+    width: 100px; /* Set fixed width in pixels */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    align-self: center; /* Center align the portrait */
+}
+
+.actorsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust the column width as needed */
+    gap: 20px;
+    padding: 20px;
+}
+
+.actorCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.actorName, .actorDOB, .actorSex {
+    margin: 10px 0;
+}
 
