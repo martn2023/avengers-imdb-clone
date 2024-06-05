@@ -101,6 +101,17 @@ body {
     color: #ED1D24; /* Marvel red color on hover */
 }
 
+/* Movie title link style */
+.movieTitleLink {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+}
+
+/* Movie title link hover effect */
+.movieTitleLink:hover .movieTitle {
+    color: #ED1D24; /* Marvel red color on hover */
+}
+
 /* Actor name link style */
 .actorNameLink {
     text-decoration: none; /* Remove underline */
@@ -198,5 +209,63 @@ body {
 
 /* Movie link hover effect */
 .movieLink:hover {
+    color: #ED1D24; /* Marvel red color on hover */
+}
+
+/* Container for the movie details */
+.movieDetailsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main content container for movie details */
+.movieDetailsContent {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    background-color: #1c1c1c; /* Ensure background color is uniform */
+    border: 1px solid white; /* Add border */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Left side of the movie details */
+.movieDetailsLeft {
+    flex: 1;
+    text-align: center;
+}
+
+/* Right side of the movie details */
+.movieDetailsRight {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    color: white;
+}
+
+/* Top section on the right */
+.movieDetailsTop {
+    border-bottom: 1px solid white; /* Add border between sections */
+    padding-bottom: 20px;
+}
+
+/* Bottom section on the right */
+.movieDetailsBottom {
+    padding-top: 20px;
+}
+
+/* Actor link style */
+.actorLink {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Actor link hover effect */
+.actorLink:hover {
     color: #ED1D24; /* Marvel red color on hover */
 }
