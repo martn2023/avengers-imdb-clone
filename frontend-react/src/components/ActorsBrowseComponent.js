@@ -21,15 +21,8 @@ function ActorsBrowseComponent() {
             <div className="actorsGrid">
                 {actors.map((actor, index) => (
                     <div key={index} className="actorCell">
-                        <img
-                            src={`/images/actors/${actor.id}/portrait_${actor.id}.jpg`}
-                            alt={`${actor.first_name} ${actor.last_name} Portrait`}
-                            className="actorPortrait"
-                            onError={(e) => { e.target.src = '/images/actors/actor_portrait_placeholder_marvel.jpg'; }}
-                        />
-                        <h2 className="actorName">{`${actor.first_name} ${actor.last_name}`}</h2>
-                        <p className="actorDOB">{new Date(actor.date_of_birth).toLocaleDateString()}</p>
-                        <p className="actorSex">{actor.sex}</p>
+                        <img src={`/images/actors/${actor.id}/portrait_${actor.id}.jpg`} alt={`${actor.first_name} ${actor.last_name}`} className="actorPortrait" />
+                        <h2 className="actorName">{actor.first_name} {actor.last_name}</h2>
                     </div>
                 ))}
             </div>

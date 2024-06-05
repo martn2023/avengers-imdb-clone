@@ -26,27 +26,30 @@ body {
 }
 
 /* Grid layout for movies */
-.moviesGrid {
+.moviesGrid, .actorsGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
-    gap: 5px;
+    grid-template-columns: repeat(5, 1fr); /* Adjust columns to 5 */
+    gap: 20px;
     padding: 20px;
     max-width: 1400px; /* Adjust max-width to 1400px */
     margin: 0 auto; /* Center the grid within its parent */
     background-color: #1c1c1c; /* Very dark gray background */
 }
 
-/* Styles for each movie cell */
-.movieCell {
+/* Styles for each movie and actor cell */
+.movieCell, .actorCell {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     width: 100%; /* Takes 100% of the grid column */
     border: 1px solid white; /* Add border for development */
+    background-color: #1c1c1c; /* Match the background color */
+    padding: 10px;
+    border-radius: 10px;
 }
 
-/* Placeholder image style */
+/* Placeholder image style for movies */
 .moviePoster {
     width: 100px; /* Set fixed width in pixels */
     height: auto; /* Maintain aspect ratio */
@@ -54,22 +57,32 @@ body {
     align-self: center; /* Center align the poster */
 }
 
+/* Actor portrait style */
+.actorPortrait {
+    width: 100px; /* Set fixed width in pixels */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    align-self: center; /* Center align the portrait */
+    filter: grayscale(85%); /* Apply 65% grayscale effect */
+}
+
 /* Movie title style */
 .movieTitle {
     color: white; /* White text color */
-    font-size: 16px; /* Reduced font size */
+    font-size: 16px; /* Font size for movie titles */
     margin: 1px 0; /* Add some margin */
 }
 
-/* Movie title hover effect */
-.movieTitle:hover {
-    color: #ED1D24; /* Marvel red color on hover */
+/* Actor name style */
+.actorName {
+    color: white; /* White text color */
+    font-size: 20px; /* Font size for actor names */
+    margin: 1px 0; /* Add some margin */
 }
 
-/* Release date style */
-.movieDate {
-    color: #b0b0b0; /* Light gray text color */
-    font-size: 12px; /* Adjust font size if needed */
+/* Movie title and actor name hover effect */
+.movieTitle:hover, .actorName:hover {
+    color: #ED1D24; /* Marvel red color on hover */
 }
 
 /* Center header */
@@ -78,33 +91,3 @@ body {
     color: white;
     margin-bottom: 10px;
 }
-
-.actorPortrait {
-    width: 100px; /* Set fixed width in pixels */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover;
-    align-self: center; /* Center align the portrait */
-}
-
-.actorsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust the column width as needed */
-    gap: 20px;
-    padding: 20px;
-}
-
-.actorCell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
-
-.actorName, .actorDOB, .actorSex {
-    margin: 10px 0;
-}
-
