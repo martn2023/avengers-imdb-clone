@@ -68,6 +68,7 @@ body {
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     align-self: center; /* Center align the poster */
+    border: 1px solid #ED1D24; /* Add red border */
 }
 
 /* Styles for each actor cell */
@@ -101,17 +102,6 @@ body {
     color: #ED1D24; /* Marvel red color on hover */
 }
 
-/* Movie title link style */
-.movieTitleLink {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text color */
-}
-
-/* Movie title link hover effect */
-.movieTitleLink:hover .movieTitle {
-    color: #ED1D24; /* Marvel red color on hover */
-}
-
 /* Actor name link style */
 .actorNameLink {
     text-decoration: none; /* Remove underline */
@@ -136,22 +126,24 @@ body {
     margin-bottom: 10px;
 }
 
-/* Actor portrait style for browse-actors page */
-.actorPortraitBrowse {
+/* Actor portrait style for browse actors page */
+.actorPortrait {
     width: 150px; /* Set fixed width in pixels */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     align-self: center; /* Center align the portrait */
     filter: grayscale(85%); /* 85% grayscale */
+    border: 1px solid #ED1D24; /* Add red border */
 }
 
-/* Actor portrait style for actor_details page */
+/* Actor portrait style for actor details page */
 .actorPortraitDetails {
     width: 300px; /* Set fixed width in pixels */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     align-self: center; /* Center align the portrait */
     filter: grayscale(50%); /* 50% grayscale */
+    border: 1px solid #ED1D24; /* Add red border */
 }
 
 /* Container for the actor details */
@@ -162,7 +154,7 @@ body {
     height: 100vh;
 }
 
-/* Main content container */
+/* Main content container for actor details */
 .actorDetailsContent {
     display: flex;
     flex-direction: row;
@@ -188,20 +180,47 @@ body {
     color: white;
 }
 
-/* Top section on the right */
+/* Top section on the right for actor details */
 .actorDetailsTop {
     border-bottom: 1px solid white; /* Add border between sections */
-    padding-bottom: 20px;
+    padding-bottom: 10px; /* Adjust padding to reduce space */
 }
 
-/* Bottom section on the right */
+/* Bottom section on the right for actor details */
 .actorDetailsBottom {
-    padding-top: 20px;
+    padding-top: 10px; /* Adjust padding to reduce space */
+}
+
+/* Actor link style */
+.actorLink {
+    color: #d3d3d3; /* Light gray text color */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Actor link hover effect */
+.actorLink:hover {
+    color: #ED1D24; /* Marvel red color on hover */
+}
+
+/* Details title style */
+.detailsTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Details date style */
+.detailsDate {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #d3d3d3; /* Light gray text color */
 }
 
 /* Movie link style */
 .movieLink {
-    color: white;
+    color: #d3d3d3; /* Light gray text color */
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -246,41 +265,22 @@ body {
     color: white;
 }
 
-/* Top section on the right */
+/* Top section on the right for movie details */
 .movieDetailsTop {
     border-bottom: 1px solid white; /* Add border between sections */
-    padding-bottom: 20px;
-    font-size: 24px; /* Increase font size for movie title */
+    padding-bottom: 10px; /* Adjust padding to reduce space */
 }
 
-/* Bottom section on the right */
+/* Bottom section on the right for movie details */
 .movieDetailsBottom {
-    padding-top: 20px;
+    padding-top: 10px; /* Adjust padding to reduce space */
 }
 
-/* Actor link style */
-.actorLink {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/* Actor link hover effect */
-.actorLink:hover {
-    color: #ED1D24; /* Marvel red color on hover */
-}
-
-/* General styles for actor and movie titles */
-.detailsTitle {
-    font-size: 24px; /* Increase font size for title */
-    color: white;
-    font-weight: bold;
-    margin: 1px 0; /* Add some margin */
-}
-
-/* Release date and birth date style */
-.detailsDate {
-    color: white;
-    font-size: 16px;
+/* Movie poster style for movie details page */
+.moviePosterDetails {
+    width: 300px; /* Set fixed width in pixels */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    align-self: center; /* Center align the poster */
+    border: 1px solid #ED1D24; /* Add red border */
 }
