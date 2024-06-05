@@ -15,8 +15,8 @@ function App() {
                     <Route path="/" element={<MoviesBrowseComponent />} />
                     <Route path="/browse-movies" element={<MoviesBrowseComponent />} />
                     <Route path="/browse-actors" element={<ActorsBrowseComponent />} />
-                    <Route path="/movie/:id" element={<MovieDetailsComponent />} />
-                    <Route path="/actor/:id" element={<ActorDetailsComponent />} />
+                    <Route path="/movie_details/:id" element={<MovieDetailsComponent />} />
+                    <Route path="/actor_details/:id" element={<ActorDetailsComponent />} />
                     <Route path="*" element={<div>404 Not Found</div>} />
                 </Routes>
             </div>
