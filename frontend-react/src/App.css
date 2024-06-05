@@ -2,9 +2,13 @@
 .navigationContainer {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
     padding: 10px;
-    background-color: #f0f0f0; /* Optional: Background color for the navigation bar */
+    background-color: #f0f0f0; /* Light gray background color */
+}
+
+/* Styles for the navigation links container to add margin */
+.navigationLinks {
+    margin-left: 200px; /* Move the links to the right by 200 pixels */
 }
 
 /* Styles for the navigation links within the navigation container */
@@ -12,6 +16,7 @@
     text-decoration: none;
     color: #000; /* Text color */
     font-weight: bold;
+    margin-right: 20px; /* Add space between the links */
 }
 
 /* Styles for the navigation links on hover within the navigation container */
@@ -29,7 +34,7 @@ body {
 .moviesGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
-    gap: 20px; /* Increase gap to 20 pixels */
+    gap: 20px; /* Set gap to 20 pixels */
     padding: 20px;
     max-width: 1400px; /* Adjust max-width to 1400px */
     margin: 0 auto; /* Center the grid within its parent */
@@ -40,7 +45,7 @@ body {
 .actorsGrid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Adjust columns to 5 */
-    gap: 20px; /* Increase gap to 20 pixels */
+    gap: 20px; /* Set gap to 20 pixels */
     padding: 20px;
     max-width: 1400px; /* Adjust max-width to 1400px */
     margin: 0 auto; /* Center the grid within its parent */
@@ -80,7 +85,7 @@ body {
 /* Movie title style */
 .movieTitle {
     color: white; /* White text color */
-    font-size: 18px; /* Decreased font size to 18 */
+    font-size: 18px; /* Reduced font size */
     margin: 1px 0; /* Add some margin */
 }
 
