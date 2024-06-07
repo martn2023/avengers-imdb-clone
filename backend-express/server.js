@@ -6,14 +6,33 @@ const cors = require('cors'); // Middleware for handling Cross-Origin Resource S
 const app = express();
 app.use(cors()); // Enable CORS for all routes
 
-// Note: Replace these values with your actual PostgreSQL connection details
+// during testing, i used this really well
+/*
 const dbConfig = {
-    user: 'postgres', // Your PostgreSQL username
-    host: 'localhost', // Your PostgreSQL host
-    database: 'avengers_movies_db_in_pg', // Your PostgreSQL database name
-    password: 'postgres', // Your PostgreSQL password
-    port: 5432 // Your PostgreSQL port
+    user: 'postgres',
+    host: 'localhost',
+    database: 'avengers_movies_db_in_pg',
+    password: 'postgres',
+    port: 5432
 };
+*/
+
+// Configuration based on your provided DATABASE_URL
+// PS C:\ReactProjects\avengers-imdb> heroku config:get DATABASE_URL -a avengers-imdb
+// postgres://ubokkefarbtl7:p29c197b53fef4e4f8e683c7476cdbd45a52c665f121eed59f3477ccd470d97fb@c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d6hhn1okmhfnsh
+
+const dbConfig = {
+    user: 'ubokkefarbtl7', // Extracted username
+    password: 'p29c197b53fef4e4f8e683c7476cdbd45a52c665f121eed59f3477ccd470d97fb', // Extracted password
+    host: 'c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com', // Extracted hostname
+    port: 5432, // Extracted port
+    database: 'd6hhn1okmhfnsh', // Extracted database name
+    ssl: {
+        rejectUnauthorized: false
+    }
+};
+
+
 
 // Creating a new PostgreSQL pool with the configuration
 const dbPool = new Pool(dbConfig);
