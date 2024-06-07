@@ -9,7 +9,7 @@ function ActorDetailsComponent() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/actors/${id}`)
+        axios.get(`${apiUrl}/actors/${id}`)
             .then(response => {
                 setActor(response.data.actor);
                 setMovies(response.data.movies);

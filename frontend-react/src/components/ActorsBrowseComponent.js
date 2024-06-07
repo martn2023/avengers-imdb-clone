@@ -6,7 +6,7 @@ function ActorsBrowseComponent() {
     const [actors, setActors] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/browse-actors')
+        axios.get('{apiUrl}/browse-actors')
             .then(response => {
                 setActors(response.data);
             })

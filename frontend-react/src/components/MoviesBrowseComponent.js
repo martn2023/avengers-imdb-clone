@@ -7,7 +7,7 @@ function MoviesBrowseComponent() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/browse-movies')
+        axios.get('{apiUrl}/browse-movies')
             .then(response => {
                 setMovies(response.data);
             })
