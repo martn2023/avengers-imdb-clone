@@ -3,11 +3,13 @@ import axios from 'axios';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../App.css'; // Import the CSS file
 
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
 function MoviesBrowseComponent() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        axios.get('{apiUrl}/browse-movies')
+        axios.get(`${apiUrl}/browse-movies`)
             .then(response => {
                 setMovies(response.data);
             })

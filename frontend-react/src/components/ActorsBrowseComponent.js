@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../App.css'; // Import the CSS file
+
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
 function ActorsBrowseComponent() {
     const [actors, setActors] = useState([]);
 
     useEffect(() => {
-        axios.get('{apiUrl}/browse-actors')
+        axios.get(`${apiUrl}/browse-actors`)
             .then(response => {
                 setActors(response.data);
             })
@@ -21,10 +24,15 @@ function ActorsBrowseComponent() {
             <div className="actorsGrid">
                 {actors.map((actor, index) => (
                     <div key={index} className="actorCell">
-                        <img src={`/images/actors/${actor.id}/portrait_${actor.id}.jpg`} alt={`${actor.first_name} ${actor.last_name}`} className="actorPortrait" />
-                        <a href={`/actor_details/${actor.id}`} className="actorNameLink">
+                        <img
+                            src={`/images/actors/${actor.id}/portrait_${actor.id}.jpg`}
+                            alt={`${actor.first_name} ${actor.last_name}`}
+                            className="actorPortrait"
+                            onError={(e) => { e.target.onerror = null; e.target.src="/images/actors/portrait_placeholder.jpg"; }}
+                        />
+                        <Link to={`/actor_details/${actor.id}`} className="actorNameLink">
                             <div className="actorName">{actor.first_name} {actor.last_name}</div>
-                        </a>
+                        </Link>
                     </div>
                 ))}
             </div>

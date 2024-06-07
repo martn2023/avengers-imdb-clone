@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 import '../App.css'; // Import the CSS file
 
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
 function ActorDetailsComponent() {
     const { id } = useParams();
     const [actor, setActor] = useState(null);
@@ -37,6 +39,7 @@ function ActorDetailsComponent() {
                         src={`/images/actors/${actor.id}/portrait_${actor.id}.jpg`}
                         alt={`${actor.first_name} ${actor.last_name}`}
                         className="actorPortraitDetails"
+                        onError={(e) => { e.target.onerror = null; e.target.src="/images/actors/portrait_placeholder.jpg"; }}
                     />
                 </div>
                 <div className="actorDetailsRight">
