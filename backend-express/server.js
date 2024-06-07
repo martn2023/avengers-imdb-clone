@@ -115,8 +115,8 @@ app.get('/browse-movie-actor-linkage', async (req, res) => {
     }
 });
 
-// Start the server and listen on port 3000
-// This means the server will wait for incoming requests on port 3000
-app.listen(3000, () => {
-    console.log('Server running on port 3000'); // Log message when server starts
+// Start the server and listen on the assigned port
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`); // Log message when server starts
 });
