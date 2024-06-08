@@ -1,10 +1,10 @@
 # AVENGERS (simplified IMDB for Avengers-related movies)
 
 ## Author's context:
-Before this, I had 2 positive experiences with Django and 3 failures with REACT. 
-- I rushed through my first REACT/Express project with a To-Do list and didn't fully comprehend how REACT works.
+Before this, I had 2 positive experiences with Django and 3 failures with React. 
+- I rushed through my first React/Express project with a To-Do list and didn't fully comprehend how React works.
 - Then I tried to make Hangman with the MERN stack. It worked locally but I couldn't get it to deploy because I didn't understand all the pieces.
-- Most recently, I tried to make a Trello clone with REACT frontend and Django backend. In hindsight, I tried to learn too many new things at once
+- Most recently, I tried to make a Trello clone with React frontend and Django backend. In hindsight, I tried to learn too many new things at once
 
 For this reason, I started this project with 2 guiding principles in mind A) don't mix frameworks. Keep this full MERN or full PERN. B) Keep the scope simple and make the pages mostly static at first.
 
@@ -70,9 +70,9 @@ Let's pretend there were 100 MCU movies eventually, and I didn't want them all i
 ## Learnings:
 - A database like Postgres can store images, but you shouldn't do it because it's designed to be fast for structured data, not images. There could be financial cost disparities too. Better to just keep it in a static_media folder
 - When you install something, dependencies are automatically added to the package.json file. In Django, you need to add manually.
-- You might have to sort data in the SQL pull/API endpoint instead of counting on REACT to do the heavy lifting
+- You might have to sort data in the SQL pull/API endpoint instead of counting on React to do the heavy lifting
 - The idea of web-scraping isn't something I considered until the middle of the project. It wasn't so bad to download movie posters, but the idea of putting them in a certain file path tree sounded tedious and annoying, so that pointed me to BeautifulSoup.
 - Python already has a "quote_plus" function for encoding strings into search URLs
-- Deployment is much more complicated than I would have imagined 1 years ago. Up until now, I have only used Heroku. This time, I touched Digital Ocean, Vercel, and Render. Vercel should have been a non-starter because it can't handle databases.
+- Deployment is much more complicated than I would have imagined 1 year ago. Up until now, I have only used Heroku. This time, I touched Digital Ocean, Vercel, and Render. Vercel should have been a non-starter because it can't handle databases.
 - CSS has a built-in grayscale tool
 - The idea of consolidating all CSS into 1 centralized style guide is not as clear-cut as I thought. There were times where putting formatting, that wasn't re-used across multiple components, actually caused more confusion crowding up one file. If I could do it all over again, I would have spent way more time planning CSS.
