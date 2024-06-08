@@ -7,7 +7,6 @@ const app = express();
 app.use(cors()); // Enable CORS for all routes
 
 // during testing, i used this really well
-/*
 const dbConfig = {
     user: 'postgres',
     host: 'localhost',
@@ -15,13 +14,13 @@ const dbConfig = {
     password: 'postgres',
     port: 5432
 };
-*/
+
 
 // Configuration based on your provided DATABASE_URL
 // PS C:\ReactProjects\avengers-imdb> heroku config:get DATABASE_URL -a avengers-imdb
 // postgres://ubokkefarbtl7:p29c197b53fef4e4f8e683c7476cdbd45a52c665f121eed59f3477ccd470d97fb@c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d6hhn1okmhfnsh
 
-// Trading off Heroku for Render now
+/* couldn't get deployment to work on Heroku, Digital Ocean, Vercel, or Render
 
 const dbConfig = {
     user: 'avengers_imdb_db_in_render_user', // Render username
@@ -34,6 +33,7 @@ const dbConfig = {
     }
 };
 
+*/
 
 
 // Creating a new PostgreSQL pool with the configuration
