@@ -75,4 +75,4 @@ Let's pretend there were 100 MCU movies eventually, and I didn't want them all i
 - Python already has a "quote_plus" function for encoding strings into search URLs
 - Deployment is much more complicated than I would have imagined 1 year ago. Up until now, I have only used Heroku. This time, I touched Digital Ocean, Vercel, and Render. Vercel should have been a non-starter because it can't handle databases.
 - CSS has a built-in grayscale tool
-- The idea of consolidating all CSS into 1 centralized style guide is not as clear-cut as I thought. There were times where putting formatting, that wasn't re-used across multiple components, actually caused more confusion crowding up one file. If I could do it all over again, I would have spent way more time planning CSS.
+- The idea of consolidating all CSS into 1 centralized style guide is not as clear-cut as I thought. There were times where putting formatting, that weren't re-used across multiple components, actually caused more confusion crowding up one file. If I could do it all over again, I would have spent way more time planning CSS.
