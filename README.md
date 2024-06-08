@@ -49,15 +49,14 @@ Express uses SQL pulls to get values out of a database, and then returns it in a
 >**REACT:**
 Understanding the pre-made and comprehensive purpose of leveraging ViewSet vs. singleton, custom views.
 
-
 >**BEAUTIFULSOUP4 & REQUESTS:**
 Python library being used for web scraping. REQUESTS library used to pull data for Beautiful Soup. First web-scraper was 90% successful in getting movie posters downloaded and placed in an automatically-generated file hierarchy.
 
->**RENDER:**
-I have loaded 3 projects onto Heroku, 1 with a Postgres database. This time, I swapped out Heroku for Vercel. Vercel now holding an online copy of my Postgres database.
-
 
 ## Potential improvements:
+>**DATA INTEGRITY:**<br>
+3 of the 31 movies have the wrong poster and 1 of the 38 actors has the wrong person's portrait. Instead of trying to Band-Aid the situation with manual overrides, I decided to let the current accuracy level get memorialized.
+
 >**DEPLOYMENT:**<br>
 In the interest of expediency, I skipped over the deployment but got to tinker around with 4 different platforms.
 
