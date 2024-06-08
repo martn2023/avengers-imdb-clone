@@ -97,9 +97,9 @@ body {
 
 /* Movie title style */
 .movieTitle {
+    margin-top: 20px;
     color: white; /* White text color */
     font-size: 20px; /* Reduced font size */
-    margin: 1px 0; /* Add some margin */
 }
 
 /* Actor name style */
