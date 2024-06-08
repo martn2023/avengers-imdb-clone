@@ -47,7 +47,8 @@ This is a separate package that is basically urls.py in Django.
 >**BEAUTIFULSOUP4 & REQUESTS:**
 Python library being used for web scraping. REQUESTS library used to pull data for Beautiful Soup. First web-scraper was 90% successful in getting movie posters downloaded and placed in an automatically-generated file hierarchy.
 
-
+>**RENDER:**
+I have loaded 3 projects onto Heroku, 1 with a Postgres database. This time, I swapped out Heroku for Vercel. Vercel now holding an online copy of my Postgres database.
 
 
 ## Potential improvements:

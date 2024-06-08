@@ -21,12 +21,14 @@ const dbConfig = {
 // PS C:\ReactProjects\avengers-imdb> heroku config:get DATABASE_URL -a avengers-imdb
 // postgres://ubokkefarbtl7:p29c197b53fef4e4f8e683c7476cdbd45a52c665f121eed59f3477ccd470d97fb@c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d6hhn1okmhfnsh
 
+// Trading off Heroku for Render now
+
 const dbConfig = {
-    user: 'ubokkefarbtl7', // Extracted username
-    password: 'p29c197b53fef4e4f8e683c7476cdbd45a52c665f121eed59f3477ccd470d97fb', // Extracted password
-    host: 'c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com', // Extracted hostname
-    port: 5432, // Extracted port
-    database: 'd6hhn1okmhfnsh', // Extracted database name
+    user: 'avengers_imdb_db_in_render_user', // Render username
+    password: 'OMA1YjdaKnSKS2zsHUKH5WRZK7YIDLaD', // Render password
+    host: 'dpg-cphq31kf7o1s73b7q6tg-a.virginia-postgres.render.com', // Render hostname
+    port: 5432, // Render port
+    database: 'avengers_imdb_db_in_render', // Render database name
     ssl: {
         rejectUnauthorized: false
     }
