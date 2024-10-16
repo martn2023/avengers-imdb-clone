@@ -3,7 +3,7 @@
 ## Author's context:
 Before this, I had 2 positive experiences with Django and 3 failures with React. 
 - I rushed through my first React/Express project with a To-Do list and didn't fully comprehend how React works.
-- Then I tried to make Hangman with the MERN stack. It worked locally but I couldn't get it to deploy because I didn't understand all the pieces.
+- Then I tried to make Hangman with the MERN stack. It worked locally, but I couldn't get it to deploy because I didn't understand all the pieces.
 - Most recently, I tried to make a Trello clone with React frontend and Django backend. In hindsight, I tried to learn too many new things at once
 
 For this reason, I started this project with 2 guiding principles in mind A) don't mix frameworks. Keep this full MERN or full PERN. B) Keep the scope simple and make the pages mostly static at first.
@@ -18,7 +18,7 @@ This time with 3 tables:
 - Movie vs. Actor (many to many relationship)
 
 #### Datascraping tool (Python):
-Using a combination of Python, Beautiful Soup 4, and ChatGPT, I was able to automate iamge searches, downloads, and folder creation with 95% blended accuracy.
+Using a combination of Python, Beautiful Soup 4, and ChatGPT assistance, I was able to automate image searches, downloads, and folder creation with 95% blended accuracy.
 - Movies (title, release date)
 - Actors (first name, last name, sex, date of birth)
 - Movie vs. Actor (many to many relationship)
@@ -52,7 +52,6 @@ Understanding the pre-made and comprehensive purpose of leveraging ViewSet vs. s
 >**BEAUTIFULSOUP4 & REQUESTS:**
 Python library being used for web scraping. REQUESTS library used to pull data for Beautiful Soup. First web-scraper was 90% successful in getting movie posters downloaded and placed in an automatically-generated file hierarchy.
 
-
 ## Potential improvements:
 >**DATA INTEGRITY:**<br>
 3 of the 31 movies have the wrong poster and 1 of the 38 actors has the wrong person's portrait. Instead of trying to Band-Aid the situation with manual overrides, I decided to let the current accuracy level get memorialized.
@@ -66,8 +65,7 @@ If people can log in, they can start having user-specific requests like favorite
 >**PAGINATION:**<br>
 Let's pretend there were 100 MCU movies eventually, and I didn't want them all in one page. I might limit a page to 4 columns, 5 rows, and make each block of 20 cells its own page.<br>
 
-
-## Learnings:
+## Challenges and learnings:
 - A database like Postgres can store images, but you shouldn't do it because it's designed to be fast for structured data, not images. There could be financial cost disparities too. Better to just keep it in a static_media folder
 - When you install something, dependencies are automatically added to the package.json file. In Django, you need to add manually.
 - You might have to sort data in the SQL pull/API endpoint instead of counting on React to do the heavy lifting
